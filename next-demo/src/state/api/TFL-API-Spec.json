@@ -2815,7 +2815,7 @@
       "get": {
         "parameters": [
           {
-            "in": "query",
+            "in": "path",
             "name": "postcode",
             "required": true,
             "schema": {
@@ -3179,7 +3179,7 @@
         "summary": "Gets the place with the given id."
       }
     },
-    "/Place/{type}/At/{Lat}/{Lon}": {
+    "/Place/{type}/At/{lat}/{lon}": {
       "get": {
         "parameters": [
           {
@@ -3195,7 +3195,7 @@
             }
           },
           {
-            "in": "query",
+            "in": "path",
             "name": "lat",
             "required": true,
             "schema": {
@@ -3203,7 +3203,7 @@
             }
           },
           {
-            "in": "query",
+            "in": "path",
             "name": "lon",
             "required": true,
             "schema": {
@@ -3264,7 +3264,7 @@
         "summary": "Gets any places of the given type whose geography intersects the given latitude and longitude. In practice this means the Place\r\n            must be polygonal e.g. a BoroughBoundary."
       }
     },
-    "/Place/{type}/overlay/{z}/{Lat}/{Lon}/{width}/{height}": {
+    "/Place/{type}/overlay/{z}/{lat}/{lon}/{width}/{height}": {
       "get": {
         "parameters": [
           {
@@ -3310,7 +3310,7 @@
             }
           },
           {
-            "in": "query",
+            "in": "path",
             "name": "lat",
             "required": true,
             "schema": {
@@ -3318,7 +3318,7 @@
             }
           },
           {
-            "in": "query",
+            "in": "path",
             "name": "lon",
             "required": true,
             "schema": {
