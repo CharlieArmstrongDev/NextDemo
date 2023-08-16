@@ -2,6 +2,7 @@ import {useState} from "react";
 import {Box} from "@mui/material";
 import Main from "./Main";
 import Header from "./header";
+import NavBar from "./navbar/NavBar";
 
 // ----------------------------------------------------------------------
 
@@ -10,6 +11,16 @@ type Props = {
 };
 
 export default function DashboardLayout({children}: Props) {
+
+  const [open, setOpen] = useState(true);
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   const renderContent = () => {
     // if (condition) {
@@ -22,7 +33,7 @@ export default function DashboardLayout({children}: Props) {
 
     return (
       <>
-        <Header />
+        <Header onOpenNav={handleOpen} />
 
         <Box
           sx={{
@@ -30,6 +41,8 @@ export default function DashboardLayout({children}: Props) {
             height: "100%",
           }}
         >
+          <NavBar openNav={open} onCloseNav={handleClose} />;
+
           <Main>{children}</Main>
         </Box>
       </>

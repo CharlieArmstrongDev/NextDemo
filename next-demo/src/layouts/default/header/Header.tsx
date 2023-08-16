@@ -1,4 +1,4 @@
-import {AppBar, IconButton, Toolbar} from "@mui/material";
+import {AppBar, IconButton, Toolbar, Typography} from "@mui/material";
 import {useTheme} from "@mui/material/styles";
 import {bgBlur} from "../../../styling/cssStyles";
 import {HEADER, NAVBAR} from "../../../styling/constants";
@@ -7,20 +7,15 @@ import Iconify from "../../../components/iconify";
 // ----------------------------------------------------------------------
 
 type Props = {
-
+  onOpenNav?: VoidFunction;
 };
 
-export default function Header({}: Props) {
+export default function Header({onOpenNav}: Props) {
   const theme = useTheme();
 
   const renderContent = (
     <>
-      {/* <Logo sx={{mr: 2.5}} /> */}
-
-
-        <IconButton sx={{mr: 1, color: "text.primary"}}>
-          <Iconify icon="eva:menu-2-fill" />
-        </IconButton>
+      <Typography variant="h4" color={"grey"}>CharlieArmstrongDev</Typography>
     </>
   );
 
