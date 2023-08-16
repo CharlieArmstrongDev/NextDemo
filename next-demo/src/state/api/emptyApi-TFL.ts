@@ -2,7 +2,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 // initialize an empty api service that we'll inject endpoints into later as needed
-export const emptyApiCompDBLogic = createApi({
+export const emptyTFLApi = createApi({
   reducerPath: "TFLApi" ,
   baseQuery: fetchBaseQuery({ 
     baseUrl: `https://api.tfl.gov.uk/`, 

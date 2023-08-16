@@ -1,4 +1,4 @@
-import { TFLApi as api } from "./emptyApi-TFL";
+import { emptyTFLApi as api } from "./emptyApi-TFL";
 export const addTagTypes = [
   "AccidentStats",
   "AirQuality",

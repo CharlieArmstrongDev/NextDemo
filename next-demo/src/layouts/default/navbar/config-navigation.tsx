@@ -26,6 +26,8 @@ const SvgColor = forwardRef<HTMLSpanElement, SvgColorProps>(({ src, sx, ...other
   />
 ));
 
+SvgColor.displayName = "SvgColor";
+
 const icon = (name: string) => <SvgColor src={`/assets/icons/navbar/${name}.svg`} sx={{width: 1, height: 1}} />;
 
 const ICONS = {
