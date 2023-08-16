@@ -2527,7 +2527,7 @@
           "Occupancy"
         ],
         "deprecated": false,
-        "operationId": "Occupancy_Get",
+        "operationId": "Occupancy_GetIDs",
         "summary": "Gets the occupancy for a car park with a given id"
       }
     },
@@ -3709,7 +3709,7 @@
           "Road"
         ],
         "deprecated": false,
-        "operationId": "Road_Get",
+        "operationId": "Road_GetIDs",
         "summary": "Gets the road with the specified id (e.g. A1)"
       }
     },
@@ -4774,7 +4774,7 @@
           "StopPoint"
         ],
         "deprecated": false,
-        "operationId": "StopPoint_Search",
+        "operationId": "StopPoint_SearchQuery",
         "summary": "Search StopPoints by their common name, or their 5-digit Countdown Bus Stop Code."
       }
     },
@@ -5125,7 +5125,7 @@
           "StopPoint"
         ],
         "deprecated": false,
-        "operationId": "StopPoint_Get",
+        "operationId": "StopPoint_GetIDs",
         "summary": "Gets a list of StopPoints corresponding to the given list of stop ids."
       }
     },
