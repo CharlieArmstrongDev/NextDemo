@@ -25,7 +25,7 @@ export default function Header({onOpenNav}: Props) {
     <AppBar
       sx={{
         boxShadow: "none",
-        height: HEADER.MAIN_DESKTOP_HEIGHT,
+        height: HEADER.DASHBOARD_DESKTOP_HEIGHT,
         borderColor: `${getPresets("blue").main}`,
         borderBottomStyle: `dashed`,
         borderWidth: 1,

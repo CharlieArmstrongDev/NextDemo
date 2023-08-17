@@ -1,7 +1,7 @@
 import Page from '@/components/Page';
 import Layout from '@/layouts';
 import { useBikePointGetAllQuery } from '@/state/api/api-TFL';
-import { Box, Container } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 
 // ----------------------------------------------------------------------
 
@@ -19,11 +19,7 @@ export default function PageHome() {
     <Page title="Home" sx={{height: "100%"}}>
       <Container maxWidth={false} sx={{height: "100%"}}>
         <Box height={"100%"}>
-          {BikePoints?.map((point) => (
-            <>
-              {point.commonName}
-            </>
-          ))}
+          <Typography variant="h4">Bikes or smth</Typography>
         </Box>
       </Container>
     </Page>
