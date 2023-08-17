@@ -1,9 +1,10 @@
 import {useRouter} from "next/router";
-import {Box, Drawer} from "@mui/material";
+import {Box, Drawer, useTheme} from "@mui/material";
 import {NAVBAR} from "../../../styling/constants";
 import Scrollbar from "../../../components/scrollbar";
 import navConfig from "./config-navigation";
 import NavSection from "./NavSection";
+import { getPresets } from "@/styling/presets";
 
 // ----------------------------------------------------------------------
 
@@ -13,7 +14,7 @@ type Props = {
 };
 
 export default function NavBar({openNav, onCloseNav}: Props) {
-  const {pathname} = useRouter();
+  const theme = useTheme();
 
   const renderContent = (
     <Scrollbar
@@ -26,7 +27,7 @@ export default function NavBar({openNav, onCloseNav}: Props) {
         },
       }}
     >
-      <NavSection sx={{pt: 9}} data={navConfig} />
+      <NavSection  data={navConfig} />
 
       <Box sx={{flexGrow: 1}} />
 
@@ -49,8 +50,9 @@ export default function NavBar({openNav, onCloseNav}: Props) {
           sx: {
             zIndex: 0,
             width: NAVBAR.DASHBOARD_WIDTH,
-            bgcolor: "transparent",
+            bgcolor: theme.palette.background.default,
             borderRightStyle: `dashed`,
+            borderColor: `${getPresets("blue").main}`,
           },
         }}
       >

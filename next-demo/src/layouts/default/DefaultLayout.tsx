@@ -37,6 +37,7 @@ export default function DashboardLayout({children}: Props) {
 
         <Box
           sx={{
+            display: {lg: "flex"},
             height: "100%",
           }}
         >

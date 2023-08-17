@@ -1,4 +1,3 @@
-import '../styling/globals.css'
 import type { Metadata } from 'next'
 import "allotment/dist/style.css";
 import 'simplebar/dist/simplebar.css';
@@ -13,6 +12,8 @@ import {Provider as ReduxProvider} from "react-redux";
 import {store} from "@/state/redux/store";
 import ProgressBar from "../components/progress-bar";
 import MotionLazyContainer from "../components/animate/MotionLazyContainer";
+import ThemeColorPresets from '@/styling/ThemeColorPresets';
+import ThemeProvider from '@/styling/ThemeProvider';
 
 // ----------------------------------------------------------------------
 
@@ -40,10 +41,14 @@ export default function MyApp(props: MyAppProps) {
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
       <ReduxProvider store={store}>
-        <MotionLazyContainer>
-          <ProgressBar />
-          {getLayout(<Component {...pageProps} />)}
-        </MotionLazyContainer>
+        <ThemeProvider>
+          <ThemeColorPresets>
+            <MotionLazyContainer>
+              <ProgressBar />
+              {getLayout(<Component {...pageProps} />)}
+            </MotionLazyContainer>
+          </ThemeColorPresets>
+        </ThemeProvider>
       </ReduxProvider>
     </>
   );

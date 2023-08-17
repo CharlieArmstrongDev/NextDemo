@@ -1,9 +1,9 @@
-import {AppBar, IconButton, Toolbar, Typography} from "@mui/material";
+import {AppBar, Link, Toolbar, Typography} from "@mui/material";
 import {useTheme} from "@mui/material/styles";
 import {bgBlur} from "../../../styling/cssStyles";
 import {HEADER, NAVBAR} from "../../../styling/constants";
-import Iconify from "../../../components/iconify";
-//import Logo from "../../../components/logo";
+import NextLink from "next/link";
+import { getPresets } from "@/styling/presets";
 // ----------------------------------------------------------------------
 
 type Props = {
@@ -15,7 +15,9 @@ export default function Header({onOpenNav}: Props) {
 
   const renderContent = (
     <>
-      <Typography variant="h4" color={"grey"}>CharlieArmstrongDev</Typography>
+      <Link component={NextLink} href="/home" sx={{display: "contents"}}>
+        <Typography variant="h4" color={"grey"}>CharlieArmstrongDev</Typography>
+      </Link>
     </>
   );
 
@@ -24,14 +26,15 @@ export default function Header({onOpenNav}: Props) {
       sx={{
         boxShadow: "none",
         height: HEADER.MAIN_DESKTOP_HEIGHT,
-        borderBottom: `solid 1px ${theme.palette.divider}`,
+        borderColor: `${getPresets("blue").main}`,
+        borderBottomStyle: `dashed`,
+        borderWidth: 1,
+        backgroundImage: `none`,
         zIndex: theme.zIndex.appBar + 1,
         ...bgBlur({
           color: theme.palette.background.default,
         }),
-        transition: theme.transitions.create(["height"], {
-          duration: theme.transitions.duration.shorter,
-        }),
+        width: `calc(100% - ${NAVBAR.DASHBOARD_WIDTH}px)`,
       }}
     >
       <Toolbar
