@@ -49,7 +49,7 @@ const items = [
 
 const sidebarConfig = [
   {
-    subheader: "Project Commander",
+    subheader: "Contents",
     items: items,
   },
 ];

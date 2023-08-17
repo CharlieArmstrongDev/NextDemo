@@ -10,7 +10,7 @@ import {NextPage} from "next";
 import Head from "next/head";
 import {AppProps} from "next/app";
 import {Provider as ReduxProvider} from "react-redux";
-//import {store} from "../state/redux/store";
+import {store} from "@/state/redux/store";
 import ProgressBar from "../components/progress-bar";
 import MotionLazyContainer from "../components/animate/MotionLazyContainer";
 
@@ -39,12 +39,12 @@ export default function MyApp(props: MyAppProps) {
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
-      {/* <ReduxProvider store={store}> */}
+      <ReduxProvider store={store}>
         <MotionLazyContainer>
           <ProgressBar />
           {getLayout(<Component {...pageProps} />)}
         </MotionLazyContainer>
-      {/* </ReduxProvider> */}
+      </ReduxProvider>
     </>
   );
 }

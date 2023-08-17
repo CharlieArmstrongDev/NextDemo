@@ -26,7 +26,7 @@ export default function NavBar({openNav, onCloseNav}: Props) {
         },
       }}
     >
-      <NavSection sx={{pt:4}} data={navConfig} />
+      <NavSection sx={{pt: 9}} data={navConfig} />
 
       <Box sx={{flexGrow: 1}} />
 

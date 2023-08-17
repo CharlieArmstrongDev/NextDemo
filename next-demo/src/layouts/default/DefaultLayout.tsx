@@ -37,13 +37,12 @@ export default function DashboardLayout({children}: Props) {
 
         <Box
           sx={{
-            display: {lg: "flex"},
             height: "100%",
           }}
         >
-          <NavBar openNav={open} onCloseNav={handleClose} />;
+          <NavBar openNav={open} onCloseNav={handleClose} />
 
-          <Main>{children}</Main>
+          <Main sx={{height:"100%"}}>{children}</Main>
         </Box>
       </>
     );
