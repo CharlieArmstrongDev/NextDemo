@@ -1,5 +1,4 @@
 import merge from 'lodash/merge';
-import { useMemo } from 'react';
 import { alpha, ThemeProvider, createTheme, useTheme } from '@mui/material/styles';
 import { getPresets } from './presets';
 // ----------------------------------------------------------------------
@@ -13,8 +12,7 @@ export default function ThemeColorPresets({ children }: Props) {
 
   const presetsColor = getPresets('blue')
 
-  const themeOptions = useMemo(
-    () => ({
+  const themeOptions = {
       palette: {
         primary: presetsColor,
         background: {
@@ -24,9 +22,7 @@ export default function ThemeColorPresets({ children }: Props) {
       customShadows: {
         primary: `0 8px 16px 0 ${alpha(presetsColor.main, 0.24)}`,
       },
-    }),
-    [presetsColor]
-  );
+    };
 
   const theme = createTheme(merge
     (

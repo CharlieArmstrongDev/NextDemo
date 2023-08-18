@@ -1,5 +1,4 @@
 import {ReactNode} from "react";
-// layouts
 import DefaultLayout from "./default";
 
 // ----------------------------------------------------------------------
@@ -10,6 +9,8 @@ type Props = {
 };
 
 export default function Layout({variant = "default", children}: Props) {
+
+  //Can accomodate for other page layouts.
   if (variant === "default") {
     return <DefaultLayout> {children} </DefaultLayout>;
   }

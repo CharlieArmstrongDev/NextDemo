@@ -3,8 +3,6 @@ import {HEADER, NAVBAR} from "../../styling/constants";
 
 // ----------------------------------------------------------------------
 
-const SPACING = 8;
-
 export default function Main({children, sx, ...other}: BoxProps) {
 
   return (

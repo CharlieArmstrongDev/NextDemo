@@ -1,17 +1,14 @@
 import type { Metadata } from 'next'
 import "allotment/dist/style.css";
 import 'simplebar/dist/simplebar.css';
-import "react-lazy-load-image-component/src/effects/blur.css";
-import "react-lazy-load-image-component/src/effects/opacity.css";
-import "react-lazy-load-image-component/src/effects/black-and-white.css";
 import {ReactElement, ReactNode} from "react";
 import {NextPage} from "next";
 import Head from "next/head";
 import {AppProps} from "next/app";
 import {Provider as ReduxProvider} from "react-redux";
 import {store} from "@/state/redux/store";
-import ProgressBar from "../components/progress-bar";
-import MotionLazyContainer from "../components/animate/MotionLazyContainer";
+import ProgressBar from "@/components/progress-bar";
+import MotionLazyContainer from "@/components/animate/MotionLazyContainer";
 import ThemeColorPresets from '@/styling/ThemeColorPresets';
 import ThemeProvider from '@/styling/ThemeProvider';
 
@@ -53,5 +50,3 @@ export default function MyApp(props: MyAppProps) {
     </>
   );
 }
-
-// ----------------------------------------------------------------------

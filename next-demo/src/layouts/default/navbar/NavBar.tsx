@@ -1,4 +1,3 @@
-import {useRouter} from "next/router";
 import {Box, Drawer, useTheme} from "@mui/material";
 import {NAVBAR} from "../../../styling/constants";
 import Scrollbar from "../../../components/scrollbar";
@@ -8,12 +7,7 @@ import { getPresets } from "@/styling/presets";
 
 // ----------------------------------------------------------------------
 
-type Props = {
-  openNav: boolean;
-  onCloseNav: VoidFunction;
-};
-
-export default function NavBar({openNav, onCloseNav}: Props) {
+export default function NavBar() {
   const theme = useTheme();
 
   const renderContent = (

@@ -12,28 +12,11 @@ type Props = {
 
 export default function DashboardLayout({children}: Props) {
 
-  const [open, setOpen] = useState(true);
-
-  const handleOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
   const renderContent = () => {
-    // if (condition) {
-    //   return (
-    //     <>
-    //      Alter Layout
-    //     </>
-    //   );
-    // }
 
     return (
       <>
-        <Header onOpenNav={handleOpen} />
+        <Header />
 
         <Box
           sx={{
@@ -41,7 +24,7 @@ export default function DashboardLayout({children}: Props) {
             height: "100%",
           }}
         >
-          <NavBar openNav={open} onCloseNav={handleClose} />
+          <NavBar />
 
           <Main sx={{height:"100%"}}>{children}</Main>
         </Box>

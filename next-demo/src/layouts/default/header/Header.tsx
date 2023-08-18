@@ -6,11 +6,7 @@ import NextLink from "next/link";
 import { getPresets } from "@/styling/presets";
 // ----------------------------------------------------------------------
 
-type Props = {
-  onOpenNav?: VoidFunction;
-};
-
-export default function Header({onOpenNav}: Props) {
+export default function Header() {
   const theme = useTheme();
 
   const renderContent = (

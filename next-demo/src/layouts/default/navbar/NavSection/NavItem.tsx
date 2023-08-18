@@ -127,8 +127,8 @@ export default function NavItem({
   const { title, path, icon, info, children, urlObjects, disabled, caption, roles} = item;
   const subItem = depth !== 1;
 
-  const router = useRouter();
-  const { project } = router.query;
+  //const router = useRouter();
+  // const { something } = router.query;
 
   const renderContent = (
     <StyledItem depth={depth} active={active} disabled={disabled} caption={!!caption} {...other}>
@@ -166,7 +166,6 @@ export default function NavItem({
         </Box>
       )}
 
-     {/* main stick with current theme => dark and dark, light with light */}
       {!!children && (
         <Iconify
           width={16}
@@ -180,9 +179,10 @@ export default function NavItem({
   const renderItem = () => {
     if (urlObjects){
       return (
-        <Link href={{pathname: path, query: { project: project}}} legacyBehavior>
-          {renderContent}
-        </Link>
+        // <Link href={{pathname: path, query: { something: something}}} legacyBehavior>
+        //   {renderContent}
+        // </Link>
+        <></>
       );
     }
 

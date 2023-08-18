@@ -17,9 +17,6 @@ const SvgColor = forwardRef<HTMLSpanElement, SvgColorProps>(({ src, sx, ...other
       width: 24,
       height: 24,
       display: 'inline-block',
-      bgcolor: 'currentColor',
-      mask: `url(${src}) no-repeat center / contain`,
-      WebkitMask: `url(${src}) no-repeat center / contain`,
       ...sx,
     }}
     {...other}
@@ -27,8 +24,6 @@ const SvgColor = forwardRef<HTMLSpanElement, SvgColorProps>(({ src, sx, ...other
 ));
 
 SvgColor.displayName = "SvgColor";
-
-const icon = (name: string) => <SvgColor src={`/assets/icons/navbar/${name}.svg`} sx={{width: 1, height: 1}} />;
 
 const ICONS = {
   dashboard: <DashboardOutlinedIcon />,
@@ -42,7 +37,7 @@ const items = [
     path: "#",
     icon: ICONS.project_settings,
     children: [
-      {title: "Page 1", path: "/TFL/Page1", urlObjects: false},
+      {title: "Lines", path: "/TFL/Lines", urlObjects: false},
     ],
   },
 ];
@@ -54,5 +49,4 @@ const sidebarConfig = [
   },
 ];
 
-//export default navConfig;
 export default sidebarConfig;
